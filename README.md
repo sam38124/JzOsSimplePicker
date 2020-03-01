@@ -35,11 +35,11 @@ make=SimplePicker(view,[String](), {rebackitem in
            var selectmake= rebackitem
         },UIColor(named: "backcolor")!,Int(view.frame.width/1.7))
 ```
-#### 2.重設數據源
+#### 3.重設數據源
 ```swift
 make.resetitem(makeitem)
 ```
-#### 3.開啟pickerView
+#### 4.開啟pickerView
 ```swift
 make.visible(false)
 ```
