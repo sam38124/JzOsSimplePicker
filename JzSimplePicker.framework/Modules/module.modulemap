@@ -1,0 +1,11 @@
+framework module JzSimplePicker {
+  umbrella header "JzSimplePicker.h"
+
+  export *
+  module * { export * }
+}
+
+module JzSimplePicker.Swift {
+    header "JzSimplePicker-Swift.h"
+    requires objc
+}
