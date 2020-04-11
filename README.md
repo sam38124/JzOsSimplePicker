@@ -22,18 +22,28 @@
 
 #### 1.宣告pickerView
 ```swift
-    var make:SimplePicker! = nil
+    var area:SimplePicker! = nil
 ```
 #### 2.設定pickerView(必須在ViewDidApper後設定)
+#### 預設
+```swift
+         area=SimplePicker(view, ["EU","North America","台灣","中國大陸"],{a in
+           //監聽選擇回調
+            self.area.close()
+            self.areatext.setTitle(a, for: .normal)
+        })
+       
+```
+#### 自定義
 ```swift
 //view為你要放置pickerview的地方
 //[String]()為你的數據源
 //backcolor為你的pickerview背景顏色
 //view.frame.width/1.7 為你的pickerview高度
-make=SimplePicker(view,[String](), {rebackitem in
-//監聽選擇回調
-           var selectmake= rebackitem
-        },UIColor(named: "backcolor")!,Int(view.frame.width/1.7))
+// .black為自定義Done按鈕的顏色
+ area=SimplePicker(view,[String](), {rebackitem in
+        //監聽選擇回調
+        },UIColor(named: "backcolor")!,Int(view.frame.width/1.7), .black)
 ```
 #### 3.重設數據源
 ```swift
